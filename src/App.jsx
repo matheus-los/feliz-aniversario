@@ -1,0 +1,71 @@
+import { useState } from 'react';
+import { memories } from './memories';
+import { motion } from 'framer-motion';
+import './App.css';
+
+function App () {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  return (
+    <div className="container">
+      <header className="header">
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          Feliz Aniverário, meu amor!
+        </motion.h1>
+        <p>Um pequeno mural da nossa história</p>
+      </header>
+
+      <div className="mural-grid">
+        {memories.map((item, index) => (
+          <motion.div
+            key={item.id}
+            className="mural-item"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, sacle: 1 }}
+            transition={{ delay: index * 0.1 }}
+          >
+            {item.type === 'image' ? (
+              <div className="card">
+                <img src={item.url} alt="Nossa Memoria" />
+                <p>{item.caption}</p>
+              </div>
+            ) : (
+              <div className="text-card">
+                <p>{item.content}</p>
+                <small style={{display: 'block', marginTop: '10px'}}>{item.author}</small>
+              </div>
+            )}
+          </motion.div>
+        ))}
+      </div>
+
+      <button className="open-modal-btn" onClick={() => setIsModalOpen(true)}>
+        Uma carta pra você!
+      </button>
+
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-modal-btn" onClick={() => setIsModalOpen(false)}>
+              X
+            </button>
+
+            <h2>Meu amor,</h2>
+            <p></p>
+            <p></p>
+
+            <p style={{ textAlign: 'right', marginTop: '30px' }}>
+              <strong>Com todo o meu amor, Math.</strong>
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default App;
