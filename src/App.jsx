@@ -25,7 +25,7 @@ function App () {
             key={item.id}
             className="mural-item"
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, sacle: 1 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1 }}
           >
             {item.type === 'image' ? (
