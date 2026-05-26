@@ -50,9 +50,12 @@ function App () {
       {isModalOpen && (
         <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={() => setIsModalOpen(false)}>
-              X
-            </button>
+
+            <div className="close-modal-container">
+              <button className="close-modal-btn" onClick={() => setIsModalOpen(false)}>
+                X
+              </button>
+            </div>
 
             <h2>Meu amor,</h2>
             <p></p>
