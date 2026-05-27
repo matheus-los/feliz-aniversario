@@ -31,7 +31,7 @@ function App () {
             {item.type === 'image' ? (
               <div className="card">
                 <img src={item.url} alt="Nossa Memoria" />
-                <p>{item.caption}</p>
+                <p></p>
               </div>
             ) : (
               <div className="text-card">
@@ -41,6 +41,22 @@ function App () {
             )}
           </motion.div>
         ))}
+      </div>
+
+      <div className="music-section">
+        <h2>Uma musica que me faz lembrar de você!</h2>
+        <div className="music-card">
+          <iframe
+            src="https://open.spotify.com/embed/track/4nTjkWK590oBDcnIxTr1mI?utm_source=generator&theme=0"
+            width="100%"
+            height="152"
+            frameBorder="0"
+            allowFullScreen=""
+            allow="autoplay: clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            style={{ borderRadius: '12px' }}
+          ></iframe>
+        </div>
       </div>
 
       <button className="open-modal-btn" onClick={() => setIsModalOpen(true)}>
@@ -62,7 +78,7 @@ function App () {
             <p></p>
 
             <p style={{ textAlign: 'right', marginTop: '30px' }}>
-              <strong>Com todo o meu amor, Math.</strong>
+              <strong>Com todo o meu amor, Math. ❤️</strong>
             </p>
           </div>
         </div>
