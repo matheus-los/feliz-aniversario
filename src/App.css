@@ -22,7 +22,7 @@ body {
 }
 
 .header h1 {
-  font-size: 2.5rem;
+  font-size: 2.9rem;
   color: var(--primary);
   margin-bottom: 10px;
 }
@@ -113,9 +113,16 @@ body {
   max-height: 80vh;
   overflow-y: auto;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  font-family: 'Georgia', serif;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
   line-height: 1.6;
   color: #333;
+}
+
+.modal-content h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  margin-top: 0;
 }
 
 .close-modal-container {
