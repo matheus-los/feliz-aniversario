@@ -12,11 +12,11 @@ export const memories = [
         type: 'text',
         content: 'Obrigado por fazer parte da minha vida!',
     },
-    {
+    /*{
         id: 3,
         type: 'image',
         url: '/assets/foto3.jpeg',
-    },
+    },*/
     {
         id: 4,
         type: 'image',
